@@ -1,11 +1,11 @@
 <?php
 /*
-Template Name: Университет
+Template Name: Партнеры
 */
 ?>
 <?php echo get_header() ?>
 
-<section id="hero" class="hero university">
+<section id="hero" class="hero partners" style="background-image: url('<?php the_field('hero_bg') ?>');">
     <div class="wrapper">
         <h1 class="white hero__title">
            <?php the_field('hero_title') ?>
@@ -18,19 +18,117 @@ Template Name: Университет
         </button>
     </div>
 </section>
-<section class="section descr university">
+<section class="section descr">
     <div class="wrapper">
         <h2>
-            <?php the_field('un_title') ?>
+            <?php the_field('part_title') ?>
         </h2>
         <p class="descr__text">
-            <?php the_field('un_descr') ?>    
+            <?php the_field('part_descr') ?>
         </p>
-        <div class="descr__text descr__text-big">
-            <?php the_field('un_main') ?>    
+    </div>
+</section>
+<section class="section clients">
+    <div class="wrapper">
+        <h2>
+            <?php the_field('clients_title', 2) ?>
+        </h2>
+        <div class="clients__slider swiper">
+            <div class="swiper-wrapper">
+            <?php
+                    $args = array(
+                    'post_type' => 'clients', 
+                    'posts_per_page' => -1, 
+                    'order' => 'ASC',
+                    'tax_query' => array(
+                            array(
+                            'taxonomy' => 'category', 
+                            'field' => 'slug',
+                            'terms' => 'clients' 
+                            )
+                    )
+                    );
+
+                    $query = new WP_Query($args);
+
+                    if ($query->have_posts()) {
+                    while ($query->have_posts()) {
+                            $query->the_post();
+                    ?>
+                        <div class="swiper-slide clients__slide">
+                            <img src="<?php the_field('kartinka') ?>"class="clients__slide-img">
+                        </div>
+                    <?php
+                    }
+                    }
+
+                    wp_reset_postdata();
+                ?>
+            </div>
+            <div class="swiper-scrollbar clients__scrollbar"></div>
         </div>
     </div>
 </section>
+<section class="section who">
+    <div class="wrapper">
+        <h2>
+            <?php the_field('who_title') ?>
+        </h2>
+        <p class="who__descr">
+            <?php the_field('who_subtitle') ?>
+        </p>
+        <div class="who__offer">
+            <div class="who__item">
+                <h4 class="who__item-title">
+                <?php the_field('who_title_1') ?>
+                </h4>
+                <span class="who__item-number">
+                    01
+                </span>
+            </div>
+            <div class="who__item">
+                <h4 class="who__item-title">
+                <?php the_field('who_title_2') ?>
+                </h4>
+                <span class="who__item-number">
+                    02
+                </span>
+            </div>
+            <div class="who__item">
+                <h4 class="who__item-title">
+                <?php the_field('who_title_3') ?>
+                </h4>
+                <span class="who__item-number">
+                    03
+                </span>
+            </div>
+            <div class="who__item">
+                <h4 class="who__item-title">
+                <?php the_field('who_title_4') ?>
+                </h4>
+                <span class="who__item-number">
+                    04
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section request">
+        <div class="wrapper">   
+            <div class="request__offer">
+                <div class="flex-offer gap-20 request__title-offer">
+                    <h2 class="request__title no-upper-case">
+                        <?php the_field('order_title') ?>
+                    </h2>
+                    <p class="request__descr">
+                        <?php the_field('order_descr') ?>
+                    </p>
+                </div>
+                <span class="request__divider"></span>
+                <?php echo do_shortcode('[contact-form-7 id="a99e4e6" title="Отправьте заявку" html_class="form request__form"]') ?>
+            </div>
+        </div>
+    </section>
 <section class="section blog">
     <div class="wrapper">
         <div class="flex-offer jus-con-sb al-it-cen">
