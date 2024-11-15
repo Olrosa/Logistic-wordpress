@@ -7,45 +7,38 @@ Template Name: О нас
     <section id="hero" class="hero about">
         <div class="wrapper">
             <h1 class="white hero__title">
-                Транспортная <br> компания “АБСОЛЮТ”
+                <?php the_field('hero_title') ?>
             </h1>
             <div class="flex-offer jus-con-end w-100">
                 <div class="hero__block">
                     <p class="hero__subtitle">
-                        Транспортная группа компаний "АБСОЛЮТ" предоставляет услуги
-                        автомобильных грузоперевозок по всей России и СНГ. Наша команда
-                        имеет более 15 лет опыта в международных и междугородных
-                        перевозках, обеспечивая надёжность и профессионализм в каждом проекте. 
-                        <br><br>
-                        Мы предлагаем услуги по перевозке и экспедированию грузов
-                        как для крупных промышленных и торговых предприятий,
-                        так и для частных лиц. Наши ключевые принципы – это надежность, профессионализм и постоянное развитие. 
+                    <?php the_field('hero_descr') ?>
                     </p>
                 </div>
             </div>
             <div class="hero__offer">
                 <div class="hero__item">
                     <h4 class="hero__item-title">
-                        10 лет
+                    <?php the_field('hero_title_1') ?>
                     </h4>
                     <p class="hero__item-descr">
-                        Работы на рынке коммерческих грузоперевозок 
+                    <?php the_field('hero_descr_1') ?>
                     </p>
                 </div>
                 <div class="hero__item">
                     <h4 class="hero__item-title">
-                        10 лет
+                    <?php the_field('hero_title_2') ?>
                     </h4>
                     <p class="hero__item-descr">
-                        Работы на рынке коммерческих грузоперевозок 
+                    <?php the_field('hero_descr_2') ?>
                     </p>
                 </div>
                 <div class="hero__item">
                     <h4 class="hero__item-title">
-                        10 лет
+                    <?php the_field('hero_title_3') ?>
                     </h4>
                     <p class="hero__item-descr">
-                        Работы на рынке коммерческих грузоперевозок 
+                    <?php the_field('hero_descr_3') ?>
                     </p>
                 </div>
             </div>
@@ -146,7 +139,7 @@ Template Name: О нас
             <div class="help__title-offer">
                 <div class="help__block">
                     <h2 class="help__title">
-                        <span>мы можем предоставить</span> вам
+                        <?php the_field('can_title') ?>
                     </h2>
                 </div>
             </div>
@@ -155,18 +148,17 @@ Template Name: О нас
                 <div class="help__image">
                     <div class="help__image-offer">
                         <h4 class="help__subtitle">
-                            <span> Фото и видео отчет</span> с отгрузкой и загрузкой
+                        <?php the_field('can_title_1') ?>
                         </h4>
                     </div>
                 </div>
                 <div class="help__gps">
                     <div class="help__gps-offer">
                         <h4 class="help__subtitle">
-                            <span>GPS -трекинг</span> с помощью:
+                        <?php the_field('can_title_2') ?>
                         </h4>
                         <p class="help__descr">
-                            • мовизор <br>
-                            • мтс поиск
+                        <?php the_field('can_descr_2') ?>
                         </p>
                     </div>
                 </div>
@@ -178,14 +170,14 @@ Template Name: О нас
             <div class="stages__title-offer">
                 <div class="stages__block">
                     <h2>
-                        <span>этапы</span> работ
+                    <?php the_field('st_title') ?>
                     </h2>
                 </div>
             </div>
             <div class="stages__offer">
                 <div class="stages__item">
                     <h4 class="stages__title">
-                        <span>Консультация</span> и расчёт стоимости
+                        <?php the_field('st_1') ?>
                     </h4>
                     <span class="stages__number">
                         01
@@ -193,42 +185,42 @@ Template Name: О нас
                 </div>
                 <div class="stages__item">
                     <h4 class="stages__title">
-                        <span>Консультация</span> и расчёт стоимости
+                        <?php the_field('st_2') ?>
                     </h4>
                     <span class="stages__number">
-                        01
+                        02
                     </span>
                 </div>
                 <div class="stages__item">
                     <h4 class="stages__title">
-                        <span>Консультация</span> и расчёт стоимости
+                        <?php the_field('st_3') ?>
                     </h4>
                     <span class="stages__number">
-                        01
+                        03
                     </span>
                 </div>
                 <div class="stages__item">
                     <h4 class="stages__title">
-                        <span>Консультация</span> и расчёт стоимости
+                        <?php the_field('st_4') ?>
                     </h4>
                     <span class="stages__number">
-                        01
+                        04
                     </span>
                 </div>
                 <div class="stages__item">
                     <h4 class="stages__title">
-                        <span>Консультация</span> и расчёт стоимости
+                        <?php the_field('st_5') ?>
                     </h4>
                     <span class="stages__number">
-                        01
+                        05
                     </span>
                 </div>
                 <div class="stages__item">
                     <h4 class="stages__title">
-                        <span>Консультация</span> и расчёт стоимости
+                        <?php the_field('st_6') ?>
                     </h4>
                     <span class="stages__number">
-                        01
+                        06
                     </span>
                 </div>
             </div>
@@ -237,16 +229,37 @@ Template Name: О нас
     <section class="section docs">
         <div class="wrapper">
             <h2>
-                Документация
+                <?php the_field('docs_title', 149) ?>
             </h2>
             <div class="docs__offer docs__slider swiper">
                 <div class="swiper-wrapper">
-                    <img src="img/docs_1.png" class="docs__item swiper-slide open-modal" data-modal="image">
-                    <img src="img/docs_1.png" class="docs__item swiper-slide">
-                    <img src="img/docs_1.png" class="docs__item swiper-slide">
-                    <img src="img/docs_1.png" class="docs__item swiper-slide">
-                    <img src="img/docs_1.png" class="docs__item swiper-slide">
-                    <img src="img/docs_1.png" class="docs__item swiper-slide">
+                    <?php
+                        $args = array(
+                        'post_type' => 'docs', 
+                        'posts_per_page' => -1, 
+                        'order' => 'ASC',
+                        'tax_query' => array(
+                                array(
+                                'taxonomy' => 'category', 
+                                'field' => 'slug',
+                                'terms' => 'docs' 
+                                )
+                        )
+                        );
+
+                        $query = new WP_Query($args);
+
+                        if ($query->have_posts()) {
+                        while ($query->have_posts()) {
+                                $query->the_post();
+                        ?>
+                            <img src="<?php the_field('kartinka') ?>" class="docs__item swiper-slide open-modal" data-modal="image">
+                        <?php
+                        }
+                        }
+
+                        wp_reset_postdata();
+                    ?>
                 </div>
                 <div class="swiper-scrollbar docs__scrollbar"></div>
             </div>
@@ -255,16 +268,37 @@ Template Name: О нас
     <section class="section docs">
         <div class="wrapper">
             <h2>
-                <span>Благодарственные</span> письма
+                <?php the_field('letters_title', 149) ?>
             </h2>
             <div class="docs__offer letters__slider swiper">
                 <div class="swiper-wrapper">
-                    <img src="img/letter_1.png" class="docs__item swiper-slide">
-                    <img src="img/letter_1.png" class="docs__item swiper-slide">
-                    <img src="img/letter_1.png" class="docs__item swiper-slide">
-                    <img src="img/letter_1.png" class="docs__item swiper-slide">
-                    <img src="img/letter_1.png" class="docs__item swiper-slide">
-                    <img src="img/letter_1.png" class="docs__item swiper-slide">
+                    <?php
+                        $args = array(
+                        'post_type' => 'letters', 
+                        'posts_per_page' => -1, 
+                        'order' => 'ASC',
+                        'tax_query' => array(
+                                array(
+                                'taxonomy' => 'category', 
+                                'field' => 'slug',
+                                'terms' => 'letters' 
+                                )
+                        )
+                        );
+
+                        $query = new WP_Query($args);
+
+                        if ($query->have_posts()) {
+                        while ($query->have_posts()) {
+                                $query->the_post();
+                        ?>
+                           <img src="<?php the_field('kartinka') ?>" class="docs__item swiper-slide open-modal" data-modal="image">
+                        <?php
+                        }
+                        }
+
+                        wp_reset_postdata();
+                    ?>
                 </div>
                 <div class="swiper-scrollbar letters__scrollbar"></div>
             </div>
@@ -311,29 +345,20 @@ Template Name: О нас
             </div>
         </div>
     </section>
-    <section class="feedback">
+    <section class="employees">
         <div class="wrapper">
-            <div class="feedback__card">
-                <h2 class="feedback__title">
-                    у вас есть груз? <br>
-                    давайте договариваться! 
-                </h2>
-                <div class="flex-offer-col gap-10 mt-20">
-                    <span class="feedback__time">
-                        10 минут
-                    </span>
-                    <span class="feedback__descr">
-                        Среднее время формирования сметы
-                    </span>
-                </div>
-                <form class="form feedback__form">
-                    <input type="text" class="input feedback__form-input" placeholder="Имя">
-                    <input type="text" class="input feedback__form-input" placeholder="Имя">
-                    <input type="text" class="input feedback__form-input" placeholder="Имя">
-                    <button class="button button-big">
+            <div class="employees__card">
+                <h3 class="employees__title">
+                    <?php the_field('employees_title', 2) ?>
+                </h3>
+                <div class="flex-offer gap-20 employees__buttons">
+                    <button class="button button-300 open-modal" data-modal="order_old">
                         Рассчитать стоимость
                     </button>
-                </form>
+                    <button class="button button-250 button-no-bg open-modal" data-modal="order">
+                        Заказать звонок
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -341,44 +366,54 @@ Template Name: О нас
         <div class="wrapper">
             <div class="flex-offer jus-con-sb al-it-cen">
                 <h2>
-                    <span>статьи</span> и новости
+                    <?php the_field('blog_title', 2) ?>
                 </h2>
                 <span class="blog__theme">
                     Все новости
                 </span>
             </div>
             <div class="blog__offer">
-                <article class="blog__card">
-                    <img src="img/blog_img.png" class="blog__img">
-                    <span class="blog__date">
-                        06.06.2024г.
-                    </span>
-                    <p class="blog__descr">
-                        Добро пожаловать в мир быстрой и надежной логистики! Наша компания специализируется на перевозке грузов по всей России и странам СНГ. Независимо от того...
-                    </p>
-                    <button class="button button-250">
-                        Читать подробнее
-                    </button>
-                </article>
-                <article class="blog__card">
-                    <img src="img/blog_img.png" class="blog__img">
-                    <span class="blog__date">
-                        06.06.2024г.
-                    </span>
-                    <p class="blog__descr">
-                        Добро пожаловать в мир быстрой и надежной логистики! Наша компания специализируется на перевозке грузов по всей России и странам СНГ. Независимо от того...
-                    </p>
-                    <button class="button button-250">
-                        Читать подробнее
-                    </button>
-                </article>
+            <?php
+            // Параметры для WP_Query
+            $args = array(
+                'post_type' => 'post', // Обычные записи (блог)
+                'category_name' => 'blog', // Слаг категории "blog"
+                'posts_per_page' => -1, // Количество записей, которое вы хотите вывести
+                'order' => 'DESC', // Порядок сортировки записей
+            );
+
+            $query = new WP_Query($args);
+
+            if ($query->have_posts()) {
+                while ($query->have_posts()) {
+                    $query->the_post();
+                    ?>
+                    <article class="blog__card">
+                        <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="blog__img">
+                        <span class="blog__date">
+                            <?php echo get_the_date('d.m.Y'); ?>г.
+                        </span>
+                        <p class="blog__descr">
+                            <?php the_field('descr') ?>
+                        </p>
+                        <a href="<?php the_permalink(); ?>" class="button button-250">
+                            Читать подробнее
+                        </a>
+                    </article>
+                    <?php
+                }
+            }
+
+            wp_reset_postdata();
+            ?>
+
             </div>
         </div>
     </section>
     <section class="section contacts">
         <div class="wrapper">
             <h2>
-                <span>связь</span> с нами
+                <?php the_field('cont_title', 2) ?>
             </h2>
             <div class="contacts__offer">
                 <div class="contacts__block contacts__block-info">
@@ -394,20 +429,20 @@ Template Name: О нас
                                     Email
                                 </span>
                             </div>
-                            <a href="mailto:info@a-tk.su" class="contacts__contact-link">info@a-tk.su</a>
+                            <a href="mailto:<?php the_field('cont_email', 2) ?>" class="contacts__contact-link"> <?php the_field('cont_email', 2) ?></a>
                         </div>
                         <div class="contacts__contact">
                             <div class="flex-offer gap-10 al-it-cen">
                                 <div class="contacts__contact-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.25 6C0.25 2.82436 2.82436 0.25 6 0.25H16C19.1756 0.25 21.75 2.82436 21.75 6V12C21.75 15.1756 19.1756 17.75 16 17.75H6C2.82436 17.75 0.25 15.1756 0.25 12V6ZM5.45586 5.58953C5.12694 5.33777 4.6562 5.40032 4.40444 5.72924C4.15268 6.05816 4.21522 6.52889 4.54414 6.78066L9.32852 10.4427C10.3149 11.1978 11.6851 11.1978 12.6715 10.4427L17.4559 6.78066C17.7848 6.52889 17.8473 6.05816 17.5956 5.72924C17.3438 5.40032 16.8731 5.33777 16.5441 5.58953L11.7598 9.25161C11.3114 9.59481 10.6886 9.59481 10.2402 9.25161L5.45586 5.58953Z" fill="#990201"/>
-                                    </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M17.0621 18.2183C15.1077 20.1726 10.1028 18.3363 5.88327 14.1167C1.66372 9.89718 -0.172609 4.89227 1.7817 2.93795L3.06847 1.65118C3.9568 0.762856 5.42054 0.786338 6.33784 1.70363L8.33092 3.69672C9.24822 4.61401 9.2717 6.07776 8.38337 6.96609L8.10699 7.24247C7.62737 7.72209 7.58045 8.49581 8.0261 9.03587C8.45597 9.55679 8.9194 10.0756 9.42188 10.5781C9.92435 11.0806 10.4432 11.544 10.9641 11.9739C11.5042 12.4196 12.2779 12.3726 12.7575 11.893L13.0339 11.6166C13.9222 10.7283 15.386 10.7518 16.3033 11.6691L18.2964 13.6622C19.2137 14.5795 19.2371 16.0432 18.3488 16.9315L17.0621 18.2183Z" fill="#990201" stroke="#990201" stroke-width="1.5"/>
+                                </svg>
                                 </div>
                                 <span class="contacts__contact-type">
-                                    Email
+                                    Телефон
                                 </span>
                             </div>
-                            <a href="mailto:info@a-tk.su" class="contacts__contact-link">info@a-tk.su</a>
+                            <a href="mailto:<?php the_field('cont_tel', 2) ?>" class="contacts__contact-link"><?php the_field('cont_tel', 2) ?></a>
                         </div>
                     </div>
                     <button class="button button-300 contacts__button">
@@ -415,14 +450,14 @@ Template Name: О нас
                     </button>
                 </div>
                 <div class="contacts__block contacts__card">
-                   <img src="icons/logo-2.png" class="contacts__logo">
+                   <img src="<?php the_field('logo', 2) ?>" class="contacts__logo">
                    <div class="contacts__card-content">
                         <div class="flex-offer-col">
                             <span class="contacts__object">
                                 Адрес:
                             </span>
                             <p class="contacts__descr">
-                                614087, г. Пермь, Рабочая улица, д. 7, 4 этаж, офис 82
+                            <?php the_field('cont_address', 2) ?>
                             </p>
                         </div>
                         <div class="flex-offer-col">
@@ -430,7 +465,7 @@ Template Name: О нас
                                 Режим работы:
                             </span>
                             <p class="contacts__descr fw-600">
-                                с 10:00 по 19:00 мск 
+                            <?php the_field('cont_time', 2) ?>
                             </p>
                             <div class="flex-offer gap-10 al-it-cen mt-10">
                                 <a href="#">

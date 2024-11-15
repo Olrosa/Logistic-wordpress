@@ -134,10 +134,10 @@
                     <?php the_field('employees_title', 2) ?>
                 </h3>
                 <div class="flex-offer gap-20 employees__buttons">
-                    <button class="button button-300">
+                    <button class="button button-300 open-modal" data-modal="order_old">
                         Рассчитать стоимость
                     </button>
-                    <button class="button button-250 button-no-bg">
+                    <button class="button button-250 button-no-bg open-modal" data-modal="order">
                         Заказать звонок
                     </button>
                 </div>
@@ -509,14 +509,7 @@
                     <?php the_field('feed_subtitle', 2) ?>
                     </span>
                 </div>
-                <form class="form feedback__form">
-                    <input type="text" class="input feedback__form-input" placeholder="Имя">
-                    <input type="text" class="input feedback__form-input" placeholder="Телефон">
-                    <input type="text" class="input feedback__form-input" placeholder="E-mail">
-                    <button class="button button-big">
-                        Рассчитать стоимость
-                    </button>
-                </form>
+                <?php echo do_shortcode('[contact-form-7 id="d580d20" title="Давайте договариваться" html_class="form feedback__form"]') ?>
             </div>
         </div>
     </section>
