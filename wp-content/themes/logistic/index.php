@@ -69,7 +69,7 @@
                 <div class="hero__descr">
                     <?php the_field('hero_descr') ?>
                 </div>
-                <button class="button button-300 open-modal hero__button" data-modal="order_old">
+                <button class="button button-300 open-modal hero__button" data-modal="order">
                     Заказать звонок
                 </button>
             </div>

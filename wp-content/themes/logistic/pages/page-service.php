@@ -81,6 +81,67 @@ Template Name: Услуга
         </div>
     </div>
 </section>
+<?php if (is_page(282)): ?>
+    <section class="section park service__park">
+        <div class="wrapper">
+            <div class="park__offer">
+                <div class="park__info">
+                    <h2>
+                        <?php the_field('park_title_2'); ?>
+                    </h2>
+                </div>
+                <div class="park__list">
+                    <?php
+                        $category_slug = get_field('category_slug');
+
+                        $args = array(
+                            'post_type' => 'container_types',
+                            'posts_per_page' => -1,
+                            'order' => 'ASC',
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'category',
+                                    'field' => 'slug',
+                                    'terms' => 'container_types'
+                                )
+                            )
+                        );
+
+                        $query = new WP_Query($args);
+
+                        if ($query->have_posts()) {
+                            while ($query->have_posts()) {
+                                $query->the_post();
+                    ?>
+                        <div class="park__item">
+                            <div class="park__item-offer">
+                                <div class="park__item-icon">
+                                    <img src="<?php the_field('img'); ?>" class="park__item-img">
+                                </div>
+                                <div class="park__content">
+                                    <h4 class="park__title">
+                                        <?php the_field('title'); ?>
+                                    </h4>
+                                    <p class="park__about">
+                                        <?php the_field('descr'); ?>
+                                    </p>
+                                    <button class="button button-250 desk open-modal" data-modal="order_old">Рассчитать стоимость</button>
+                                </div>
+                            </div>
+                            <button class="button button-250 mob open-modal" data-modal="order_old">Рассчитать стоимость</button>
+                        </div>
+                    <?php
+                            }
+                        }
+
+                        wp_reset_postdata();
+                    ?>
+                </div>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
+
 <section class="section process">
     <div class="wrapper">
         <div class="process__offer">
@@ -88,9 +149,9 @@ Template Name: Услуга
                 <h2>
                     <?php the_field('proc_title') ?>
                 </h2>
-                <p class="process__descr">
+                <div class="process__descr">
                     <?php the_field('proc_descr') ?>
-                </p>
+                </div>
             </div>
         </div>
     </div>
